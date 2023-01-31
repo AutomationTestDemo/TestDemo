@@ -114,9 +114,10 @@ public class assignmentPage extends CucumberRunner {
         WebElement uploadImage=driver.findElement(mainImage);
         js.executeScript("arguments[0].scrollIntoView();", uploadImage);
         uploadImage.click();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         //put path to your image in a clipboard
         StringSelection ss = new StringSelection(System.getProperty("user.dir") + "\\ImageUpload\\demo.jpeg");
+        System.out.println(System.getProperty("user.dir") + "\\ImageUpload\\demo.jpeg");
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
 
         //imitate mouse events like ENTER, CTRL+C, CTRL+V
@@ -131,8 +132,7 @@ public class assignmentPage extends CucumberRunner {
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.delay(90);
         robot.keyRelease(KeyEvent.VK_ENTER);
-        Thread.sleep(2000);
-//        uploadImage.sendKeys("C:\\Users\\addil\\Downloads\\WhatsAppImage.jpeg");
+        Thread.sleep(4000);
 //        uploadImage.sendKeys(Keys.ENTER);
     }
 
