@@ -92,7 +92,7 @@ public class assignmentPage extends CucumberRunner {
         WebElement selectFramework=driver.findElement(framework);
         js.executeScript("arguments[0].scrollIntoView();", selectFramework);
         selectFramework.click();
-        selectFramework.sendKeys("others");
+        selectFramework.sendKeys("other");
         selectFramework.sendKeys(Keys.ENTER);
         WebElement enterQuantity=driver.findElement(quantity);
         js.executeScript("arguments[0].scrollIntoView();", enterQuantity);
@@ -151,14 +151,15 @@ public class assignmentPage extends CucumberRunner {
         increaseBid.sendKeys("150");
     }
 
-    public void enterDate() {
+    public void enterDate() throws InterruptedException {
         WebElement enterDate=driver.findElement(date);
         enterDate.click();
+        Thread.sleep(1000);
         WebElement dateBtn=driver.findElement(dateOk);
         dateBtn.click();
     }
 
-    public void enterTime() {
+    public void enterTime() throws InterruptedException {
         WebElement enterTime=driver.findElement(time);
         enterTime.click();
         WebElement timeBtn=driver.findElement(timeOk);

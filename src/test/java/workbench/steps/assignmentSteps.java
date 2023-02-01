@@ -77,12 +77,12 @@ public class assignmentSteps {
     }
 
     @And("user enter date")
-    public void userEnterDate() {
+    public void userEnterDate() throws InterruptedException {
         assignment.enterDate();
     }
 
     @And("user enter time")
-    public void userEnterTime() {
+    public void userEnterTime() throws InterruptedException {
         assignment.enterTime();
     }
 
